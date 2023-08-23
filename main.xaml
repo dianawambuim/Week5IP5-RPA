@@ -1,0 +1,178 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1394,2755" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Agent Assistant Robot" sap:VirtualizedContainerService.HintSize="1404,2690" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1362,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Agent Ready. Please use ALT + s to trigger the Automation&quot;]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="1362,131" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Configure the triggers below while add/remove other trigger activities based on your needs; they are monitored simultaneously and the event handler is executed once for any occuring event" />
+    <ui:TriggerScope DisplayName="Monitor Agent Action" sap:VirtualizedContainerService.HintSize="1362,2303" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
+      <ui:TriggerScope.Action>
+        <ActivityAction x:TypeArguments="ui:EventInfoTriggerArgs">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:EventInfoTriggerArgs" Name="args" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Event Handler" sap:VirtualizedContainerService.HintSize="1310,1989" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
+              <Variable x:TypeArguments="ui:UiElement" Name="EditableText" />
+              <Variable x:TypeArguments="x:Boolean" Name="boolTicketCreated">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Boolean" />
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="1268,74" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Create Zoho desk Ticket from the Request Excel file" />
+            <ui:PathExists DisplayName="Path Exists" Exists="[boolFileExists]" sap:VirtualizedContainerService.HintSize="1268,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[Environment.CurrentDirectory+&quot;\Requests\Request.xlsx&quot;]" PathType="File" />
+            <If Condition="[boolFileExists]" sap:VirtualizedContainerService.HintSize="1268,1654" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="889,1496" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="strContact" />
+                    <Variable x:TypeArguments="x:String" Name="strEmail" />
+                    <Variable x:TypeArguments="x:String" Name="strSubject" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="847,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;A request is available, we will promptly start to creat&quot;]" />
+                  <ui:Comment sap:VirtualizedContainerService.HintSize="847,150" sap2010:WorkflowViewState.IdRef="Comment_6" Text="//The invoke activity below will call up the ReadRequest workflow and pass the Path to the Request file as an input argument. The ReadRequest workflow will then return the contact name, email and subject as out pot arguments back to our Main workflow" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="847,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="ReadRequest.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="RequestFilePath">[Environment.CurrentDirectory+"\Requests\Request.xlsx"]</InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="ContactName">[strContact]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="Email">[strEmail]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="Subject">[strSubject]</OutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="847,84" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;The client &quot; + strContact + &quot; reachable on the email address &quot; + strEmail + &quot; needs help with &quot; + strSubject]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="847,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SaaSAutomation.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="ContactName">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strContact" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Email">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strEmail" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="Subject">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strSubject" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Successful">
+                        <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="boolTicketCreated" />
+                      </OutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <If Condition="[boolTicketCreated]" sap:VirtualizedContainerService.HintSize="847,662" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="426,504" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MoveFile ContinueOnError="{x:Null}" Destination="[Environment.CurrentDirectory+&quot;\Processed\Requests.xlsx&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[Environment.CurrentDirectory+&quot;\Requets\Requests.xlsx&quot;]" />
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="384,84" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Zoho Ticket Created and File Moved to the Processed Folder. Use ALT + S to check for new requests to process.&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="384,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Zoho Ticket Created and File Moved to the Processed Folder. Use ALT + S to check for new requests to process.&quot;]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,307" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Zoho Ticket not created and file is not processed yet. Please check the input request file and Use ALT+s to reprocess the same request&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Zoho Ticket not created and file is not processed yet. Please check the input request file and Use ALT+s to reprocess the same request&quot;]" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Sorry, there are no available requests to preocess&quot;]" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:TriggerScope.Action>
+      <ui:TriggerScope.Triggers>
+        <scg:List x:TypeArguments="Activity" Capacity="4">
+          <ui:HotkeyTriggerV2 BlockEvent="True" DisplayName="Hotkey Trigger" sap:VirtualizedContainerService.HintSize="1326,84" sap2010:WorkflowViewState.IdRef="HotkeyTriggerV2_1" Key="f12" KeyModifiers="Alt" UseWindowsHotKey="False" />
+        </scg:List>
+      </ui:TriggerScope.Triggers>
+    </ui:TriggerScope>
+  </Sequence>
+</Activity>
