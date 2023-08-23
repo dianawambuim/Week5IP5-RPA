@@ -17,10 +17,6 @@ GitHub
 
 For any support, contact me on: dianawambum@gmail.com
 
-## Github Pages
-
-The site is live at : LINK TO YOUR WEBSITE HERE
-
 ### License
 
 *This project uses GPL license.*
