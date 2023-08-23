@@ -5,7 +5,7 @@ Project done by D Muchoki
 Creating automated workflow(Customer care auto-ticketing) by use of attended automation once triggered.
 
 ## Live URL
-The  project's live link for the repo is https://github.com/dianawambuim/Week5IP5-RPA
+The  project's live link for the repo is https://dianawambuim.github.io/Week5IP5-RPA/
 
 ## Technologies Used
 MS Excel
